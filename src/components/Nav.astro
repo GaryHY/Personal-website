@@ -1,0 +1,110 @@
+<script>
+    const navbar = document.getElementById("navbar");
+    let prevScrollPos = window.scrollY;
+    window.onscroll = function () {
+        const currentScrollPos = window.scrollY;
+        if (navbar !== null ){
+            if ( window.scrollY > 25) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+            if( prevScrollPos < currentScrollPos ){
+                navbar.classList.add("hide");
+            } else {
+                navbar.classList.remove("hide");
+            }
+            prevScrollPos = currentScrollPos;
+        }
+    }
+</script>
+
+<nav id="navbar">
+    <div class="container__nav">
+        <div class="flex space__between">
+            <img class="avatar" src="/avatar.jpg" alt="logo">
+            <div class="flex nav__list">
+                <ol class="flex nav__list" role="list">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <!-- <li><a href="">Experience</a></li> -->
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                </ol>
+                <p class="resume">Resume</p>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    nav {
+        padding-block: 1.8rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        transition: all 300ms ease-in-out;
+        transform: translateY(0px);
+        font-size: 0.8rem;
+    }
+
+    nav.scrolled {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        backdrop-filter: blur(10px);
+        padding-block: 1rem;
+    }
+
+    nav.hide{
+        transform: translateY(-100%);
+    }
+
+
+    .avatar {
+        width: 60px;
+        border-radius: 100vw;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .space__between {
+        justify-content: space-between;
+    }
+
+    .nav__list {
+        gap: 2rem;
+        list-style: none;
+        counter-reset: my-counter;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ol li {
+        counter-increment: my-counter;
+        position: relative;
+    }
+
+    ol li::before {
+        content: "0" counter(my-counter)".";
+        color: #ff4d5a;
+        margin-right: 0.5rem;
+    }
+
+    li:is(:hover, :focus-visible) {
+        color: #ff4d5a;
+    }
+
+    .resume {
+        list-style-type: none;
+        padding: 0.65rem 1.2rem;
+        border: 1px solid #ff4d5a;
+        color: #ff4d5a;
+        border-radius: 0.2rem;
+    }
+</style>
