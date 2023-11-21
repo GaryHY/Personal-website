@@ -1,0 +1,70 @@
+---
+    import Card from "./Card.astro";
+---
+
+<section id="articles" class="articles">
+    <div class="container">
+        <div class="flex articles__heading">
+            <h2 class="articles__title">
+                <span class="accent">03. </span> Articles I have wrote
+            </h2>
+            <div class="line"></div>
+        </div>
+        <a href=""><p class="accent">Check the blog</p></a>
+        <div class="cards">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+        </div>
+    </div>
+</section>
+
+<style>
+    .articles {
+        margin-top: 5rem;
+        color: white;
+    }
+    
+    .cards {
+        margin-top: 5rem;
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        opacity: 0.1;
+    }
+
+    .articles__heading {
+        width: 60%;
+        gap: 1rem;
+    }
+
+    .articles__title {
+        font-size: 2rem;
+        display: flex;
+        gap: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .accent {
+        color: #ff4d5a;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:is(:hover,:focus-visible) {
+        text-decoration: underline #ff4d5a;
+    }
+</style>

@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card__header flex">
+        <img class="icon" src="http://via.placeholder.com/60?text=logo" alt="article illustration">
+        <a href="">
+            <img class="link" src="http://via.placeholder.com/40?text=logo" alt="link illustration">
+        </a>
+    </div>
+    <h3 class="card__title">Integrating Algolia search with Wordpress multisite</h3>
+    <div class="card__content space__small">
+        <p class="card__description light">Buildign a complex multisite compatible Wordpress plugin to build global search with Algolia</p>
+        <p class="card__related__project light">Related project</p>
+    </div>
+</div>
+
+<style>
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .space__small > * {
+        margin-top: 1rem;
+    }
+
+    .card {
+        padding: 4rem 2rem;
+        background-color: hsl(212, 68%, 12%);
+        border-radius: 0.5rem;
+        transition: all 200ms ease-in-out;
+    }
+
+    .card:is(:hover, :focus_visible){
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+
+    .card:is(:hover, :focus_visible) .card__title{
+        color: #ff4d5a; 
+        /* transform: translateY(-20px); */
+    }
+
+    .card__header {
+        justify-content: space-between;
+    }
+
+    .card__title {
+        color: #hsl(356, 100%, 85%);
+        font-size: 1.2rem;
+        margin-top: 4rem;
+    }
+
+    .light {
+        opacity: 0.7;
+    }
+</style>
