@@ -1,0 +1,70 @@
+<div class="hero">
+    <div class="container">
+        <div class="margin">
+            <p class="hero__intro">Hi, my name is</p>
+            <div class="titles">
+                <h1 class="hero__title">Gary HENRY.</h1>
+                <h2 class="hero__subtitle">I build things for the web.</h2>
+            </div>
+            <p class="hero__content">I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
+        </div>
+        <button class="hero__cta">Check out my course!</button>
+    </div>
+</div>
+
+<style>
+    .hero {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-left: 20vw;
+        font-family: 'sans-serif';
+        max-height: 1000px;
+    }
+    .hero__intro {
+        color: #ff4d5a;
+    }
+
+    .titles > * {
+        margin-top: 1.2rem;
+    }
+
+    .hero__title, .hero__subtitle {
+        font-size: clamp(32px, 3.2vw, 80px);
+        line-height: 0.9;
+        letter-spacing: 0;
+    }
+
+    .hero__subtitle, .hero__content {
+        opacity: 0.5;
+    }
+
+    .hero__content {
+        max-width: 540px;
+    }
+
+
+    .margin > * {
+        margin-top: 2rem;
+    }
+
+    button.hero__cta {
+        color: #ff4d5a;
+        padding: 1rem;
+        border-radius: 1px solid #ff4d5a;
+        border: none;
+        background: transparent;
+        border: 1px solid #ff4d5a;
+        /* NOTE: Je n'arrive pas a gerer ce truc la */
+        margin-top: 4rem;
+        border-radius: 0.2rem;
+    }
+
+    .hero__cta:is(:hover, :focus-visible){
+        cursor: pointer; 
+        background-color: #ff4d5a;
+        color: white;
+    }
+</style>
