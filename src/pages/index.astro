@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout title="Henga Dirtybit">
@@ -10,22 +11,23 @@ import Hero from "../components/Hero.astro";
             <Hero />
         </header>
         <main>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    </main>
-</Layout>
+            <AboutMe />
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        </main>
+    </Layout>
 
-<style>
-header {
-    /* background-color: #1a1a1a; */
-    color: white;
-}
+    <style>
+    header {
+        /* background-color: #1a1a1a; */
+        color: white;
+    }
 
-section {
-    outline: 1px solid red;
-    height: 60vh;
-}
+    section {
+        outline: 1px solid red;
+        height: 60vh;
+    }
 
 </style>
