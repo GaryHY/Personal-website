@@ -7,7 +7,7 @@ import Projects from "../components/Projects.astro";
 import Articles from "../components/Articles.astro";
 ---
 
-<Layout title="Henga Dirtybit">
+<Layout title="Gary Henry">
         <header>
             <Nav />
             <Hero />
@@ -17,11 +17,39 @@ import Articles from "../components/Articles.astro";
             <Projects />
             <Articles />
         </main>
+    <footer>
+        <div class="footer__content">
+            <p>Designed by Brittany CHIANG</p>
+            <a href="https://v4.brittanychiang.com/">(https://v4.brittanychiang.com/)</a>
+            <p>& Built by Gary Henry.</p>
+        </div>
+    </footer>
     </Layout>
 
-    <style>
+<style>
     header {
-        /* background-color: #1a1a1a; */
         color: white;
+    }
+
+    footer {
+        color: white;
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        display: grid;
+        place-items: center;
+        opacity: 0.7;
+    }
+    .footer__content {
+        display: flex;
+        gap: 0.3rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:is(:hover, :focus){
+        text-decoration: underline;
     }
 </style>
