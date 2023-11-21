@@ -1,0 +1,176 @@
+---
+// TODO: Fetch the data from my pinned projects on github.
+---
+
+<section id="projects" class="projects container">
+    <div class="flex projects__heading">
+        <h2 class="projects__title">
+            <span class="accent">02. </span> Projects I have built
+        </h2>
+        <div class="line"></div>
+    </div>
+    <div class="project__content">
+            <div class="project__text space__small"> 
+                <div>
+                    <p class="accent">Featured project</p>
+                    <h3 class="title">Titre du projet</h3> 
+                </div>
+                <p class="project__description">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.</p>
+                <ul role="list" class="project__techno">
+                    <li class="list__item">Golang</li>
+                    <li class="list__item">Python</li>
+                    <li class="list__item">Typescript</li>
+                    <li class="list__item">Svelte</li>
+                </ul>
+                <div class="icon__container">
+                    <img class="icon" src="http://via.placeholder.com/30?text=logo">
+                    <img class="icon" src="http://via.placeholder.com/30?text=logo">
+                </div>
+            </div>
+            <img class="project__illustration" src="http://via.placeholder.com/800x600?text=Project photo">
+    </div>
+
+    <div class="project__content">
+            <div class="project__text space__small"> 
+                <div>
+                    <p class="accent">Featured project</p>
+                    <h3 class="title">Titre du projet</h3> 
+                </div>
+                <p class="project__description">A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.</p>
+                <ul role="list" class="project__techno">
+                    <li class="list__item">Golang</li>
+                    <li class="list__item">Python</li>
+                    <li class="list__item">Typescript</li>
+                    <li class="list__item">Svelte</li>
+                </ul>
+                <div class="icon__container">
+                    <img class="icon" src="http://via.placeholder.com/30?text=logo">
+                    <img class="icon" src="http://via.placeholder.com/30?text=logo">
+                </div>
+            </div>
+            <img class="project__illustration" src="http://via.placeholder.com/800x600?text=Project photo">
+    </div>
+</section>
+
+<style>
+    .projects {
+        color: white;
+        margin-top: 5rem;
+    }
+
+    .projects > * + * {
+        margin-top: 5rem;
+    }
+
+    .project__content {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: center;
+        grid-gap: 10px;
+    }
+
+    .project__content:nth-of-type(2n+1){
+        text-align: right;
+    }
+
+    .project__content:nth-of-type(2n+1) .project__text{
+       grid-column: 7 / -1; 
+       grid-row: 1;
+    }
+
+    .project__content:nth-of-type(2n+1) .project__illustration{
+       grid-column: 1 / 8; 
+       grid-row: 1;
+    }
+
+    .project__text {
+       grid-column: 1 / 8; 
+       grid-row: 1;
+    }
+
+    .project__illustration {
+       grid-column: 7 / -1; 
+       grid-row: 1;
+    }
+
+    /* .project__illustration {} */
+
+    .project__techno {
+        justify-content: end;
+    }
+
+    .project__content:nth-of-type(2n) .project__techno {
+        justify-content: start;
+    }
+
+    .projects__heading {
+        width: 60%;
+        gap: 1rem;
+    }
+
+    .space__large > * {
+        margin-top: 2rem;
+    }
+
+    .space__small > * {
+        margin-top: 1rem;
+    }
+
+    .title {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .projects__title {
+        font-size: 2rem;
+        display: flex;
+        gap: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        opacity: 0.1;
+    }
+
+    .accent {
+        color: #ff4d5a;
+    }
+
+    .icon__container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project__content:nth-of-type(2n+1) .icon__container {
+        justify-content: end;
+    }
+
+    .project__description {
+        padding: 3rem 2rem;
+        background-color: #1a1a1a;
+        z-index: 2;
+        position: relative;
+        opacity: 1;
+    }
+
+    .project__techno {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .list__item {
+        margin-left: 0;
+    }
+</style>
